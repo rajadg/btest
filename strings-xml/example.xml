@@ -114,20 +114,15 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="example">
-  <Table ss:ExpandedColumnCount="14" ss:ExpandedRowCount="7" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="15" ss:ExpandedRowCount="7" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s26">
    <Column ss:StyleID="s26" ss:AutoFitWidth="0" ss:Width="90"/>
    <Column ss:StyleID="s26" ss:Width="58.5"/>
    <Column ss:StyleID="s26" ss:Width="172.5"/>
    <Column ss:StyleID="s26" ss:Width="105"/>
    <Column ss:StyleID="s26" ss:Width="106.5"/>
-   <Column ss:StyleID="s26" ss:Width="109.5"/>
-   <Column ss:StyleID="s26" ss:Width="102"/>
-   <Column ss:StyleID="s26" ss:Width="104.25" ss:Span="1"/>
-   <Column ss:Index="10" ss:StyleID="s26" ss:Width="99"/>
-   <Column ss:StyleID="s26" ss:Width="98.25" ss:Span="1"/>
-   <Column ss:Index="13" ss:StyleID="s26" ss:Width="106.5"/>
-   <Column ss:StyleID="s26" ss:Width="115.5"/>
+   <Column ss:StyleID="s26" ss:AutoFitWidth="0" ss:Width="108.75" ss:Span="8"/>
+   <Column ss:Index="15" ss:AutoFitWidth="0"/>
    <Row ss:Height="18" ss:StyleID="s25">
     <Cell ss:StyleID="s28"><Data ss:Type="String">String ID</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">CPO1.0</Data></Cell>
@@ -135,7 +130,7 @@
     <Cell ss:StyleID="s28"><Data ss:Type="String">Dutch</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">French</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">German</Data></Cell>
-    <Cell ss:StyleID="s28"><Data ss:Type="String">Spanish</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Greek</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">Italian</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">Swedish</Data></Cell>
     <Cell ss:StyleID="s28"><Data ss:Type="String">Finnish</Data></Cell>
@@ -151,7 +146,7 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">annuleren</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">annuler</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">stornieren</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">cancelar</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Ακύρωση</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">cancellare</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">avboka</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">peruuttaa</Data></Cell>
@@ -167,7 +162,7 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">afwerking</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">finition</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Fertig</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">acabado</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">φινίρισμα</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">finitura</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Finish</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">viimeistely</Data></Cell>
@@ -183,7 +178,7 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hallo {{ USER }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Bonjour {{ USER }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hallo {{ USER }}</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">Hola {{ USER }}</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Γεια σας {{user}}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Ciao {{ USER }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hej {{ USER }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hei {{USER}}</Data></Cell>
@@ -192,14 +187,14 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">Witaj {{user}}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">こんにちは{{ USER }}</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:Height="25.5">
     <Cell ss:StyleID="s29"><Data ss:Type="String">ID_OPEN_APP</Data></Cell>
     <Cell ss:StyleID="s24"><Data ss:Type="String">Open %s</Data></Cell>
     <Cell ss:StyleID="s27"><Data ss:Type="String">Open {{ APP_NMAE }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Open {{ APP_NMAE }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Ouvrir {{ APP_NMAE }}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Öffnen {{ APP_NMAE }}</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">Abrir {{ APP_NMAE }}</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Ανοίξτε {{APP_NMAE}}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Aperto {{APP_NMAE}}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Öppna {{APP_NMAE}}</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Open {{APP_NMAE}}</Data></Cell>
@@ -215,7 +210,7 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">Help</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Aide</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hilfe</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">Ayuda</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Βοήθεια</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Guida in linea</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Hjälp</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">apua</Data></Cell>
@@ -231,7 +226,7 @@
     <Cell ss:StyleID="s30"><Data ss:Type="String">Start [ProductName] </Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Exécuter [ProductName] </Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">[ProductName] starten</Data></Cell>
-    <Cell ss:StyleID="s30"><Data ss:Type="String">Ejecutar [ProductName]</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">Εκκίνηση [ProductName]</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Avvia [ProductName]</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Starta [ProductName]</Data></Cell>
     <Cell ss:StyleID="s30"><Data ss:Type="String">Käynnistä [ProductName]</Data></Cell>
@@ -273,8 +268,9 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>10</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>0</ActiveRow>
+     <ActiveCol>6</ActiveCol>
+     <RangeSelection>C7</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
