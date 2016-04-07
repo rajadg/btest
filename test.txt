@@ -3,3 +3,5 @@ second branch
 second line
 
 fourth commit for branch rename testing
+
+line 7 added for demo
