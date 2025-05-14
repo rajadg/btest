@@ -1,0 +1,580 @@
+<!DOCTYPE html><html><head>
+      <title>DES-detailed-MOB</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Local\VSCode\VSCodePython\data\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<ul>
+<li><a href="#schedule">SCHEDULE</a></li>
+<li><a href="#day-1--hall-2---practical-insights-and-best-practices">Day 1 | HALL 2 - Practical Insights and Best Practices</a>
+<ul>
+<li><a href="#1030---1100">10:30 - 11:00</a>
+<ul>
+<li><a href="#reimagining-data-modeling-with-generative-ai-patterns-challenges-and-real-world-impact">Reimagining Data Modeling with Generative AI: Patterns, Challenges, and Real-World Impact</a></li>
+</ul>
+</li>
+<li><a href="#1105---1135">11:05 - 11:35</a>
+<ul>
+<li><a href="#build-best-in-class-risk-products-for-credit-and-fraud-risk-management-at-american-express">Build best-in-class Risk Products for Credit and Fraud Risk Management at American Express</a></li>
+</ul>
+</li>
+<li><a href="#1140---1210">11:40 - 12:10</a>
+<ul>
+<li><a href="#architecting-the-contextual-layer-powering-next-gen-ai-with-data-engineering">Architecting the Contextual Layer: Powering Next-Gen AI with Data Engineering</a></li>
+</ul>
+</li>
+<li><a href="#1215---1245">12:15 - 12:45</a>
+<ul>
+<li><a href="#reimagining-data-transformation-with-copilots-and-low-code-etl">Reimagining Data Transformation with Copilots and Low-Code ETL</a></li>
+</ul>
+</li>
+<li><a href="#1345---1415">13:45 - 14:15</a>
+<ul>
+<li><a href="#the-art-of-data-publishing-from-noise-to-narrative">The Art of Data Publishing: From Noise to Narrative</a></li>
+</ul>
+</li>
+<li><a href="#1415---1445">14:15 - 14:45</a>
+<ul>
+<li><a href="#emerging-trends-in-data-engineering-with-ai">Emerging Trends in Data Engineering with AI</a></li>
+</ul>
+</li>
+<li><a href="#1445---1515">14:45 - 15:15</a>
+<ul>
+<li><a href="#winning-with-data">Winning with Data</a></li>
+</ul>
+</li>
+<li><a href="#1505---1535">15:05 - 15:35</a>
+<ul>
+<li><a href="#mastering-new-data-engineering-landscape-ai-powered-analytics-with-open-iceberg-tables-in-the-cloud">Mastering New Data Engineering Landscape: AI-Powered Analytics with Open Iceberg Tables in the Cloud</a></li>
+</ul>
+</li>
+<li><a href="#1545---1615">15:45 - 16:15</a>
+<ul>
+<li><a href="#data-engineering-powering-ai-for-the-agentic-cybersecurity-platform">Data Engineering Powering AI for the Agentic Cybersecurity Platform</a></li>
+</ul>
+</li>
+<li><a href="#1605---1635">16:05 - 16:35</a>
+<ul>
+<li><a href="#powering-machine-learning-with-a-unified-data-platform">Powering Machine Learning with a Unified Data Platform</a></li>
+</ul>
+</li>
+<li><a href="#1645---1715">16:45 - 17:15</a>
+<ul>
+<li><a href="#next-gen-data-platforms-unified-reliable-scalable-and-ai-driven">Next-Gen Data Platforms: Unified, Reliable, Scalable, and AI-Driven</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#day-1--main-hall---thought-leadership-and-strategic-insights">Day 1 | Main Hall - Thought Leadership and Strategic Insights</a>
+<ul>
+<li><a href="#1000---1020">10:00 - 10:20</a>
+<ul>
+<li><a href="#milliseconds-matter-engineering-real-time-price-streams-at-scale">Milliseconds Matter: Engineering Real-Time Price Streams at Scale</a></li>
+</ul>
+</li>
+<li><a href="#1020---1050">10:20 - 10:50</a>
+<ul>
+<li><a href="#the-agentic-shift-reimagining-data-engineering">The Agentic Shift: Reimagining Data Engineering</a></li>
+</ul>
+</li>
+<li><a href="#1050---1120">10:50 - 11:20</a>
+<ul>
+<li><a href="#evolving-data-platforms-the-strategic-shift-to-contextual-knowledge">Evolving Data Platforms: The Strategic Shift to Contextual Knowledge</a></li>
+</ul>
+</li>
+<li><a href="#1120---1150">11:20 - 11:50</a>
+<ul>
+<li><a href="#generative-ai-in-data-engineering">Generative AI in Data Engineering</a></li>
+</ul>
+</li>
+<li><a href="#1150---1220">11:50 - 12:20</a>
+<ul>
+<li><a href="#building-a-modern-data-engineering-practice">Building a Modern Data Engineering Practice</a></li>
+</ul>
+</li>
+<li><a href="#1220---1250">12:20 - 12:50</a>
+<ul>
+<li><a href="#data-architecture-journey-dataverse">Data Architecture Journey: DataVerse</a></li>
+</ul>
+</li>
+<li><a href="#1250---1320">12:50 - 13:20</a>
+<ul>
+<li><a href="#unifying-data--ai-how-starburst-empowers-modern-data-platforms">Unifying Data &amp; AI: How Starburst Empowers Modern Data Platforms</a></li>
+</ul>
+</li>
+<li><a href="#1320---1350">13:20 - 13:50</a>
+<ul>
+<li><a href="#panel-discussion-ai-in-data-engineering-will-automation-replace-data-engineers">Panel Discussion: AI in Data Engineering: Will Automation Replace Data Engineers?</a></li>
+</ul>
+</li>
+<li><a href="#1450---1520">14:50 - 15:20</a>
+<ul>
+<li><a href="#intelligent-data-platforms---the-foundation-for-machine-learning-and-generative-ai-innovation">Intelligent Data Platforms - The Foundation for Machine Learning and Generative AI Innovation</a></li>
+</ul>
+</li>
+<li><a href="#1525---1555">15:25 - 15:55</a>
+<ul>
+<li><a href="#powering-the-future-preparing-your-data-foundation-for-generative-ai">Powering the Future: Preparing your Data Foundation for Generative AI.</a></li>
+</ul>
+</li>
+<li><a href="#1600---1630">16:00 - 16:30</a>
+<ul>
+<li><a href="#milliseconds-matter-the-impact-of-real-time-analytics">Milliseconds Matter: The Impact of Real-Time Analytics</a></li>
+</ul>
+</li>
+<li><a href="#1635---1705">16:35 - 17:05</a>
+<ul>
+<li><a href="#empowering-ai-agents-with-real-time-insights--from-streams-to-smarter-actions">Empowering AI Agents with Real-Time Insights : From Streams to Smarter Actions</a></li>
+</ul>
+</li>
+<li><a href="#1710---1740">17:10 - 17:40</a>
+<ul>
+<li><a href="#powering-lending-with-data-engineering">Powering Lending with Data Engineering</a></li>
+</ul>
+</li>
+<li><a href="#1740---1840">17:40 - 18:40</a>
+<ul>
+<li><a href="#standup-by-sapan-verma">Standup by Sapan Verma</a></li>
+</ul>
+</li>
+<li><a href="#1910---2100">19:10 - 21:00</a>
+<ul>
+<li><a href="#all-hands-gala-networking-dinner">All Hands Gala Networking Dinner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#day-2--hall-2---practical-insights-and-best-practices">Day 2 | HALL 2 - Practical Insights and Best Practices</a>
+<ul>
+<li><a href="#1030---1100-1">10:30 - 11:00</a>
+<ul>
+<li><a href="#building-scalable-data-engineering-pipelines-for-responsible-ai-applications-using-personalized-data-in-insurtech">Building Scalable Data Engineering Pipelines for Responsible AI Applications Using Personalized Data in Insurtech</a></li>
+</ul>
+</li>
+<li><a href="#1105---1135-1">11:05 - 11:35</a>
+<ul>
+<li><a href="#from-warehouse-to-lakehouse-the-future-of-real-time-data-at-zepto">From Warehouse to Lakehouse: The Future of Real-Time Data at Zepto</a></li>
+</ul>
+</li>
+<li><a href="#1140---1210-1">11:40 - 12:10</a>
+<ul>
+<li><a href="#unlock-the-power-of-your-raw-data-queryable--evolvable-storage-for-scalable-reprocessing">Unlock the Power of Your Raw Data: Queryable &amp; Evolvable Storage for Scalable Reprocessing</a></li>
+</ul>
+</li>
+<li><a href="#1215---1245-1">12:15 - 12:45</a>
+<ul>
+<li><a href="#architecting-scalable-data-pipelines-for-financial-insights">Architecting Scalable Data Pipelines for Financial Insights</a></li>
+</ul>
+</li>
+<li><a href="#1345---1410">13:45 - 14:10</a>
+<ul>
+<li><a href="#building-resilient-data-architectures">Building Resilient Data Architectures</a></li>
+</ul>
+</li>
+<li><a href="#1410---1435">14:10 - 14:35</a>
+<ul>
+<li><a href="#future-forward-health-insurance-data-platform">Future-forward health insurance data platform</a></li>
+</ul>
+</li>
+<li><a href="#1435---1500">14:35 - 15:00</a>
+<ul>
+<li><a href="#real-time-data-pipelines-powering-instant-insights-and-decision-making">Real-Time Data Pipelines: Powering Instant Insights and Decision-Making</a></li>
+</ul>
+</li>
+<li><a href="#1500---1525">15:00 - 15:25</a>
+<ul>
+<li><a href="#the-data-engineering-practices">The Data Engineering Practices</a></li>
+</ul>
+</li>
+<li><a href="#1525---1550">15:25 - 15:50</a>
+<ul>
+<li><a href="#architecting-data-quality-trust--reliability-in-modern-data-stacks">Architecting Data Quality: Trust &amp; Reliability in Modern Data Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#day-2--main-hall---thought-leadership-and-strategic-insights">Day 2 | Main Hall - Thought Leadership and Strategic Insights</a>
+<ul>
+<li><a href="#1000---1030">10:00 - 10:30</a>
+<ul>
+<li><a href="#making-data-think">Making Data Think</a></li>
+</ul>
+</li>
+<li><a href="#1030---1050">10:30 - 10:50</a>
+<ul>
+<li><a href="#data-engineering-transformation-with-ai-agents">Data Engineering Transformation with AI Agents</a></li>
+</ul>
+</li>
+<li><a href="#1050---1120-1">10:50 - 11:20</a>
+<ul>
+<li><a href="#data-revolution-revolutionizing-services-as-agentic-solution-powered-by-data">Data Revolution: Revolutionizing Services as Agentic solution powered by Data</a></li>
+</ul>
+</li>
+<li><a href="#1120---1150-1">11:20 - 11:50</a>
+<ul>
+<li><a href="#thinktank-targets-genai-platform-for-simplifying-llm-ops">ThinkTank: Target’s GenAI platform for simplifying LLM Ops</a></li>
+</ul>
+</li>
+<li><a href="#1150---1220-1">11:50 - 12:20</a>
+<ul>
+<li><a href="#the-evolution-from-data-quality-to-data-reliability-engineering-for-ai">The Evolution from Data Quality to Data Reliability Engineering for AI</a></li>
+</ul>
+</li>
+<li><a href="#1220---1250-1">12:20 - 12:50</a>
+<ul>
+<li><a href="#ai-driven-data-engineering-for-the-future-of-gem">AI-Driven Data Engineering for the Future of GeM</a></li>
+</ul>
+</li>
+<li><a href="#1250---1330">12:50 - 13:30</a>
+<ul>
+<li><a href="#panel-discussion-data-as-a-product-a-game-changer-or-just-a-buzzword">Panel Discussion: Data as a Product: A Game-Changer or Just a Buzzword?</a></li>
+</ul>
+</li>
+<li><a href="#1430---1500">14:30 - 15:00</a>
+<ul>
+<li><a href="#humanising-big-data-for-nextillions-customers">Humanising Big Data for nextillions customers</a></li>
+</ul>
+</li>
+<li><a href="#1500---1530">15:00 - 15:30</a>
+<ul>
+<li><a href="#ethical-ai-development-for-sensitive-domains">Ethical AI Development for Sensitive Domains</a></li>
+</ul>
+</li>
+<li><a href="#1530---1600">15:30 - 16:00</a>
+<ul>
+<li><a href="#engineering-ai-powered-threat-detection-at-pharma-scale">Engineering AI-Powered Threat Detection at Pharma Scale</a></li>
+</ul>
+</li>
+<li><a href="#1600---1700">16:00 - 17:00</a>
+<ul>
+<li><a href="#10-wickets-one-vision-what-cricket-teaches-us-about-legacy-consistency-and-the-power-of-focus">10 Wickets, One Vision: What Cricket Teaches Us About Legacy, Consistency, and the Power of Focus</a></li>
+</ul>
+</li>
+<li><a href="#1700---1800">17:00 - 18:00</a>
+<ul>
+<li><a href="#the-finkelstein-awards-for-data-engineering-excellence-2025">The Finkelstein Awards for Data Engineering Excellence 2025</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="schedule">SCHEDULE </h1>
+<p>We are in the process of finalizing the schedule for 2025. Please check back this space again.</p>
+<p>Expect more than 60 speakers to speak at DES 2025. To explore speaking opportunities with DES, write to <a href="mailto:info@aimmediahouse.com">info@aimmediahouse.com</a><br>
+Collapse All -</p>
+<h1 id="day-1--hall-2---practical-insights-and-best-practices">Day 1 | HALL 2 - Practical Insights and Best Practices </h1>
+<h2 id="1030---1100">10:30 - 11:00 </h2>
+<h3 id="reimagining-data-modeling-with-generative-ai-patterns-challenges-and-real-world-impact">Reimagining Data Modeling with Generative AI: Patterns, Challenges, and Real-World Impact </h3>
+<blockquote>
+<p>By Sanjoy Saha Director - Big Data Engineering AWS at Tiger Analytics, Senthilkumar Chelatvallapil Director - Data Warehouse at Tiger Analytics</p>
+</blockquote>
+<p>As data-driven operations scale, data modeling has become increasingly complex and fast-paced, often clashing with the demands of agile delivery. This session explores how Generative AI is tackling long-standing challenges such as source data understanding and gaps in data catalogs. It highlights how GenAI is automating tasks like data profiling, metadata generation, schema design, and mapping, unlocking new levels of speed and accuracy. Real-world examples from Tiger Analytics illustrate the impact, along with a perspective on the evolving role of GenAI as a co-pilot in building scalable, business-aligned data architectures.</p>
+<h2 id="1105---1135">11:05 - 11:35 </h2>
+<h3 id="build-best-in-class-risk-products-for-credit-and-fraud-risk-management-at-american-express">Build best-in-class Risk Products for Credit and Fraud Risk Management at American Express </h3>
+<blockquote>
+<p>By Neeraj Monga Vice President - Risk Products and Data Strategy at American Express</p>
+</blockquote>
+<p>Data Engineering and Technical Product Capabilities at AMEX empowering critical business and risk decisioning at AMEX.</p>
+<h2 id="1140---1210">11:40 - 12:10 </h2>
+<h3 id="architecting-the-contextual-layer-powering-next-gen-ai-with-data-engineering">Architecting the Contextual Layer: Powering Next-Gen AI with Data Engineering </h3>
+<blockquote>
+<p>By Mansit Suman Engineering Manager at MathCo , Tapas Das Data Architect at MathCo</p>
+</blockquote>
+<p>Data engineers play a pivotal role in driving contextualized intelligence. They must ensure that data is enriched with the proper context to deliver meaningful insights. This tech talk will explore the practical steps and tools data engineers can use to build a contextual layer, ensuring AI models can deliver strategic insights based on relevant business contexts.</p>
+<h2 id="1215---1245">12:15 - 12:45 </h2>
+<h3 id="reimagining-data-transformation-with-copilots-and-low-code-etl">Reimagining Data Transformation with Copilots and Low-Code ETL </h3>
+<blockquote>
+<p>By Shashank Mishra Data Engineer at Prophecy</p>
+</blockquote>
+<h2 id="1345---1415">13:45 - 14:15 </h2>
+<h3 id="the-art-of-data-publishing-from-noise-to-narrative">The Art of Data Publishing: From Noise to Narrative </h3>
+<blockquote>
+<p>By Ravish Mishra Vice President of Engineering | Data at Angel One</p>
+</blockquote>
+<p>In a world overflowing with data, the true challenge lies not in access—but in articulation. This session explores the craft of transforming raw, noisy data into compelling, credible, and impactful narratives. From choosing the right metrics to visual storytelling and context-driven publishing, we’ll unpack techniques that help data professionals elevate insight over information. Whether you're building dashboards, whitepapers, or public datasets, discover how to publish data that informs, engages, and drives action.</p>
+<h2 id="1415---1445">14:15 - 14:45 </h2>
+<h3 id="emerging-trends-in-data-engineering-with-ai">Emerging Trends in Data Engineering with AI </h3>
+<blockquote>
+<p>By Ramesh Kumar Saxena Head of Data and AI Platforms &amp; Engineering at PharmEasy</p>
+</blockquote>
+<p>AI is reshaping the landscape of data engineering in transformative ways. One key trend is the rise of AI-powered data pipelines, where machine learning automates tasks like data cleaning, transformation, and feature engineering, significantly accelerating development cycles. Alongside this, AI-driven data observability tools are improving data reliability by detecting anomalies and quality issues in real time. Intelligent data catalogs are also evolving, using AI to automatically generate metadata, track lineage, and simplify data discovery. Natural language interfaces, such as Text-to-SQL systems powered by large language models, are making it easier for non-technical users to query databases using plain English. ETL and ELT processes are becoming smarter too, with AI automating schema mapping and transformation logic, reducing the need for manual coding. In parallel, synthetic data generation is gaining traction, enabling the creation of realistic datasets for testing, training, and privacy-sensitive use cases. Real-time data processing is becoming more intelligent as AI models integrate directly into streaming frameworks like Kafka and Spark, supporting use cases like fraud detection and personalization. Governance is also being augmented by AI, with tools now capable of automatically detecting sensitive data like PII and enforcing compliance with regulations.</p>
+<h2 id="1445---1515">14:45 - 15:15 </h2>
+<h3 id="winning-with-data">Winning with Data </h3>
+<blockquote>
+<p>By Koushik Kadidal Chief Data Officer &amp; Head of Insights Business at PayU</p>
+</blockquote>
+<p>In his session, Koushik will reveal how organizations can transform from passive data collectors to strategic data orchestrators, unlocking unprecedented business growth and competitive advantage. Drawing from his learnings of proven frameworks being adopted by industry-leading financial institutions and companies, he will outline the foundational pillars necessary to build a high-impact data strategy—starting with organizational alignment, where data teams are integrated into business units and held accountable for P&amp;L outcomes. Koushik will also highlight the role of experimentation, scalable infrastructure, and predictive analytics in optimizing every stage of the customer journey and the common pitfalls like misaligned KPIs, siloed teams, and resistance to change—offering practical solutions to overcome them. The session will deliver an overall theme that winning with data is not about tools alone; it’s about aligning people, processes, and purpose.</p>
+<h2 id="1505---1535">15:05 - 15:35 </h2>
+<h3 id="mastering-new-data-engineering-landscape-ai-powered-analytics-with-open-iceberg-tables-in-the-cloud">Mastering New Data Engineering Landscape: AI-Powered Analytics with Open Iceberg Tables in the Cloud </h3>
+<blockquote>
+<p>By Sarita Priyadarshini Senior Solution Engineer at Snowflake</p>
+</blockquote>
+<p>This topic explores how data engineering is evolving to support modern AI and analytics. It emphasizes the importance of new data engineering techniques in building scalable and efficient systems on cloud data platforms. A key focus is on using Iceberg tables, an open table format that improves data reliability and performance. By leveraging Iceberg tables, organizations can enhance analytics capabilities and empower AI applications. This approach enables better data management, reduces costs, and accelerates the development of data-driven solutions.</p>
+<h2 id="1545---1615">15:45 - 16:15 </h2>
+<h3 id="data-engineering-powering-ai-for-the-agentic-cybersecurity-platform">Data Engineering Powering AI for the Agentic Cybersecurity Platform </h3>
+<blockquote>
+<p>By Paras Nigam Vice President, AI &amp; Engineering at KnowBe4</p>
+</blockquote>
+<p>Discover the engineering innovations behind KnowBe4's agentic platform, which utilizes Data and Generative AI to empower cybersecurity defense. Learn how KnowBe4 developed AIDA (Artificial Intelligence Defense Agents) to significantly reduce administrative overhead for customers by automating the configuration of KnowBe4 products. AIDA intelligently understands specific customer requirements based on user behavior, leading to automated risk reduction. This session will delve into the cutting-edge technologies that power this feature, including the latest advancements in Artificial Intelligence, Datamesh architecture, and big data engineering tools. We will explore how these elements are integrated to deliver current GenAI capabilities and lay the foundation for future intelligent features aimed at proactively mitigating human-related cyber risks.</p>
+<h2 id="1605---1635">16:05 - 16:35 </h2>
+<h3 id="powering-machine-learning-with-a-unified-data-platform">Powering Machine Learning with a Unified Data Platform </h3>
+<blockquote>
+<p>By Senthil Kumar Ganapathy Head of Martech Engineering at Wayfair India TDC</p>
+</blockquote>
+<p>The Unified Data platform is designed to address key limitations in data management for machine learning (ML) model development, training, and testing. Its primary focus is to improve turnaround time (TAT), enhance experimentation velocity, and provide a centralized solution for data needs.</p>
+<h2 id="1645---1715">16:45 - 17:15 </h2>
+<h3 id="next-gen-data-platforms-unified-reliable-scalable-and-ai-driven">Next-Gen Data Platforms: Unified, Reliable, Scalable, and AI-Driven </h3>
+<blockquote>
+<p>By Prakash Patidar Vice President of Data Engineering at CoinDCX</p>
+</blockquote>
+<p>In this session, Prakash Patidar will explore the architecture of next-gen data platforms that are unified, reliable, scalable, and AI-driven. He will discuss how real-time data processing and AI technologies are transforming data systems, enabling smarter decision-making at scale. With a focus on automation, data quality, and real-time insights, this talk will showcase how businesses can leverage AI to unlock the true potential of their data, especially in the fast-evolving world of crypto and DeF.</p>
+<hr>
+<br>
+<div style="page-break-after: always;"></div>
+<h1 id="day-1--main-hall---thought-leadership-and-strategic-insights">Day 1 | Main Hall - Thought Leadership and Strategic Insights </h1>
+<h2 id="1000---1020">10:00 - 10:20 </h2>
+<h3 id="milliseconds-matter-engineering-real-time-price-streams-at-scale">Milliseconds Matter: Engineering Real-Time Price Streams at Scale </h3>
+<blockquote>
+<p>By Kausal Malladi SVP &amp; Head of Engineering at INDmoney</p>
+</blockquote>
+<p>In an era where financial decisions hinge on millisecond precision, delivering real-time price streams to end-users is no longer a luxury — it's a necessity. This talk explores modern best practices in building low-latency, highly reliable real-time data pipelines using technologies like WebSockets and NATS. We’ll dive into the architectural patterns that enable microservices to stream live pricing data seamlessly, and how tracking end-to-end latencies — from client browsers to backend systems — is both crucial and challenging. Learn how these real-time streams not only power live charts and dashboards but also feed AI systems that detect anomalies, forecast trends, and trigger intelligent actions. If you're building platforms where speed, scale, and accuracy are non-negotiable, this session will offer practical insights and proven techniques to get it right.</p>
+<h2 id="1020---1050">10:20 - 10:50 </h2>
+<h3 id="the-agentic-shift-reimagining-data-engineering">The Agentic Shift: Reimagining Data Engineering </h3>
+<blockquote>
+<p>By Maulik Dixit Senior Director, Data Engineering, Tredence Inc</p>
+</blockquote>
+<p>As data volumes surge, traditional data engineering struggles with complexity, cost, and agility. This keynote introduces a paradigm shift: agentic systems — AI-native agents that autonomously plan, adapt, and collaborate across the data lifecycle. These systems transform ingestion, quality, pipeline design, and observability, freeing engineers to focus on design and value, not manual tasks. We explore today’s DataOps limitations, define agentic capabilities, showcase real-world use cases, and examine shifts in skills, teams, and ethics. For CDOs, platform leaders, and architects, this session offers a bold vision: Data Engineering reimagined through intelligent agents that deliver faster, smarter, and more scalable business outcomes.</p>
+<h2 id="1050---1120">10:50 - 11:20 </h2>
+<h3 id="evolving-data-platforms-the-strategic-shift-to-contextual-knowledge">Evolving Data Platforms: The Strategic Shift to Contextual Knowledge </h3>
+<blockquote>
+<p>By Varun Saraogi Principal &amp; Head of Data Engineering at MathCo</p>
+</blockquote>
+<p>In today's data-driven world, context is everything. Without context, raw data can often lead to inaccurate insights, misinterpretations, and missed opportunities. For data engineers, this means building platforms that enrich data with relevant business context and provide strategic insights. Join this session to explore how modern, context-centric platforms help businesses stay ahead in the data-driven landscape.</p>
+<h2 id="1120---1150">11:20 - 11:50 </h2>
+<h3 id="generative-ai-in-data-engineering">Generative AI in Data Engineering </h3>
+<blockquote>
+<p>By Prakash Rajagopalan Head of Technology Consulting at Tiger Analytics</p>
+</blockquote>
+<p>Over the last couple of years, the capabilities of large language models (LLMs) and Generative AI have evolved at a breakneck pace, with enterprise adoption accelerating rapidly. These technologies are not only driving automation but are fundamentally challenging traditional approaches to how data is engineered, managed, and consumed. We are entering a new paradigm—one where emerging ways of working are redefining what’s possible across the enterprise data ecosystem. Join us for this Keynote as we explore what this transformation means for data engineers and business leaders. We'll examine real-world use cases, the evolving skill sets needed to thrive, and how teams can adapt to stay ahead in a rapidly shifting landscape.</p>
+<h2 id="1150---1220">11:50 - 12:20 </h2>
+<h3 id="building-a-modern-data-engineering-practice">Building a Modern Data Engineering Practice </h3>
+<blockquote>
+<p>By Sumeet Tandure Senior Manager, Sales Engineering at Snowflake</p>
+</blockquote>
+<p>In the era of Agentic &amp; GenAI, having a strong data engineering foundation is more important than ever. Learn how to build Simplified, governed, performant &amp; resilient data engineering framework for the modern era</p>
+<h2 id="1220---1250">12:20 - 12:50 </h2>
+<h3 id="data-architecture-journey-dataverse">Data Architecture Journey: DataVerse </h3>
+<blockquote>
+<p>By Mansi Murarka Principal Consultant at Genpact, Sunil Patil Enterprise Data Management Practice Lead at Genpact</p>
+</blockquote>
+<p>The data landscape is transforming with generative AI driving innovations in pipeline architecture, real-time stream processing, and modern ETL practices. Emphasis on data trust, quality, and scalable monetization, alongside advancements in schema design and access layers, is unlocking new opportunities and efficiencies for businesses.</p>
+<h2 id="1250---1320">12:50 - 13:20 </h2>
+<h3 id="unifying-data--ai-how-starburst-empowers-modern-data-platforms">Unifying Data &amp; AI: How Starburst Empowers Modern Data Platforms </h3>
+<blockquote>
+<p>By Shivani Bennur Onboarding Engineer, Starburst</p>
+</blockquote>
+<p>Unifying Data &amp; AI starts here. Explore how Starburst’s open hybrid lakehouse powers advanced RAG workflows across modern data platforms. With data mesh tying it all together, discover the future of seamless, scalable analytics.</p>
+<h2 id="1320---1350">13:20 - 13:50 </h2>
+<h3 id="panel-discussion-ai-in-data-engineering-will-automation-replace-data-engineers">Panel Discussion: AI in Data Engineering: Will Automation Replace Data Engineers? </h3>
+<blockquote>
+<p>By Vikas C Sajjan Engineering Head - Enterprise AI/ML Solutions at AMD, Anirban Roy Vice President of Engineering &amp; Architecture at FSS, Sambit Sarangi Senior Vice President of Technology at MakeMyTrip, Sougata Dowari Vice President at Genpact</p>
+</blockquote>
+<p>AI-driven automation is rapidly transforming data engineering workflows, from automated pipeline generation to self-healing data architectures. But does this mean traditional data engineering roles will become obsolete? This panel will debate whether AI is an enabler or a disruptor, discussing where human expertise remains irreplaceable and how engineers can adapt to stay relevant in the AI-powered future.</p>
+<h2 id="1450---1520">14:50 - 15:20 </h2>
+<h3 id="intelligent-data-platforms---the-foundation-for-machine-learning-and-generative-ai-innovation">Intelligent Data Platforms - The Foundation for Machine Learning and Generative AI Innovation </h3>
+<blockquote>
+<p>By Srinivasa Rao Kattuboina Senior Director, Head of Data and Analytics Practice at EPAM Systems</p>
+</blockquote>
+<p>The current technological landscape underscores a significant convergence, where functionalities traditionally associated with separate domains of data management and AI are now unified within intelligent data platforms. This integration marks a fundamental shift in perspective, moving away from the concept of AI as merely an application layer to AI-integrated data infrastructure. This amalgamation facilitates a more streamlined and effective utilization of data for AI initiatives, fastens the pace of iteration in model development and ensures a tighter alignment between an organization's overall data strategy and AI vision. Furthermore, the emphasis placed on the delivery of "actionable insights" and the facilitation of "powerful decision-making" highlights the primary business-oriented purpose of these platforms. The evolution of data platforms reflects an imperative to not only manage the exponentially growing data volume but also derive intelligence that can inform and drive strategic decisions. Intelligent data platforms are engineered explicitly with this objective at their core, leveraging AI to automate insight and offer recommendations for accelerated organizational innovation.</p>
+<h2 id="1525---1555">15:25 - 15:55 </h2>
+<h3 id="powering-the-future-preparing-your-data-foundation-for-generative-ai">Powering the Future: Preparing your Data Foundation for Generative AI. </h3>
+<blockquote>
+<p>By Mousumi Kar Director - Data Engineering at Sigmoid, Shalwi Kapisway Principal Solution Architect at Kenvue</p>
+</blockquote>
+<p>As organizations race to adopt Generative AI, a strong and scalable data foundation is essential. This session explores how building a FAIR-aligned Data Marketplace has transformed data access, quality, and governance- paving the way for AI-driven innovation. Learn how a persona-driven, self-service platform powered by Snowflake, Power BI, and advanced metadata cataloging accelerated decision-making, eliminated redundancy, and boosted adoption by 25%. Key innovations include a real-time Data Quality Index, seamless integration for both technical and non-technical users, and smart search capabilities using LLMs. Discover how strategic leadership, automation, and a culture of collaboration are driving enterprise-wide data democratization- preparing the organization to fully harness the power of Generative AI.</p>
+<h2 id="1600---1630">16:00 - 16:30 </h2>
+<h3 id="milliseconds-matter-the-impact-of-real-time-analytics">Milliseconds Matter: The Impact of Real-Time Analytics </h3>
+<blockquote>
+<p>By Rakesh Puttaswamy Principal Solutions Architect at ClickHouse</p>
+</blockquote>
+<p>In modern systems, real-time insights aren't a luxury—they're a requirement. Whether you're debugging distributed systems, tracking financial transactions, or analyzing user behavior, sub-second query latency can be the difference between reacting and proactively optimizing. This talk dives into the technical foundations that make real-time analytics possible at scale, using ClickHouse as the case study. We'll explore the architectural underpinnings of its high-performance columnar engine, including vectorized execution, late materialization, and how it handles time series and semi-structured data like JSON with minimal overhead. Through real-world use cases—from high-throughput log ingestion in observability stacks, to petabyte-scale analytics for adtech, fintech, and user personalization—you’ll see how engineering teams are designing for low latency without sacrificing flexibility or scale. If you're a data engineer, backend developer, or platform architect working with high-velocity data, this session will give you a deeper understanding of how to build infrastructure that can keep up.</p>
+<h2 id="1635---1705">16:35 - 17:05 </h2>
+<h3 id="empowering-ai-agents-with-real-time-insights--from-streams-to-smarter-actions">Empowering AI Agents with Real-Time Insights : From Streams to Smarter Actions </h3>
+<blockquote>
+<p>By Jayesh Asrani Principal Solutions Architect at StarTree</p>
+</blockquote>
+<p>As AI evolves towards autonomous agents, integrating real-time data becomes crucial. This session explores how StarTree’s support for the Model Context Protocol (MCP) and native vector auto-embedding empowers AI agents with live, structured data access. Attendees will gain insights into building scalable pipelines that combine streaming ingestion (Kafka), real-time analytics (Apache Pinot), and AI models. A live demonstration will showcase the integration of Kafka → Pinot → AI agent, highlighting the architecture that enables real-time decision-making with contextually relevant information. This talk emphasizes practical takeaways for architecting systems that seamlessly blend AI and analytics technologies.</p>
+<h2 id="1710---1740">17:10 - 17:40 </h2>
+<h3 id="powering-lending-with-data-engineering">Powering Lending with Data Engineering </h3>
+<blockquote>
+<p>By Hareesh Ravuri VP Technology at mPokket, Sandip Didwania VP Data at mPokket</p>
+</blockquote>
+<p>In today’s digital-first world, data engineering is at the heart of transforming how lending works—from credit risk modeling to real-time loan approvals. This session explores how modern data pipelines, scalable architectures, and intelligent automation are powering more accurate, faster, and inclusive lending decisions. Learn how financial institutions are leveraging data engineering to drive innovation, ensure compliance, and deliver seamless borrower experiences.</p>
+<h2 id="1740---1840">17:40 - 18:40 </h2>
+<h3 id="standup-by-sapan-verma">Standup by Sapan Verma </h3>
+<h2 id="1910---2100">19:10 - 21:00 </h2>
+<h3 id="all-hands-gala-networking-dinner">All Hands Gala Networking Dinner </h3>
+<hr>
+<br>
+<div style="page-break-after: always;"></div>
+<h1 id="day-2--hall-2---practical-insights-and-best-practices">Day 2 | HALL 2 - Practical Insights and Best Practices </h1>
+<h2 id="1030---1100-1">10:30 - 11:00 </h2>
+<h3 id="building-scalable-data-engineering-pipelines-for-responsible-ai-applications-using-personalized-data-in-insurtech">Building Scalable Data Engineering Pipelines for Responsible AI Applications Using Personalized Data in Insurtech </h3>
+<blockquote>
+<p>By Harish Ramarao Senior Vice President of Engineering at ACKO Technologies</p>
+</blockquote>
+<p>In the era of Responsible AI, the ability to build scalable and efficient data engineering pipelines is critical—especially in data-sensitive domains like Insurtech. This session will explore how to architect robust pipelines that handle personalized data at scale while ensuring compliance, transparency, and fairness. We’ll delve into practical approaches for integrating Responsible AI principles into data workflows, tackling challenges like data privacy, bias mitigation, and auditability. Attendees will gain insights into real-world use cases and design patterns that enable secure, scalable, and ethical AI applications in the insurance space.</p>
+<h2 id="1105---1135-1">11:05 - 11:35 </h2>
+<h3 id="from-warehouse-to-lakehouse-the-future-of-real-time-data-at-zepto">From Warehouse to Lakehouse: The Future of Real-Time Data at Zepto </h3>
+<blockquote>
+<p>By Abhinav Raghuvanshi Associate Director, Data Engineering at Zepto</p>
+</blockquote>
+<h2 id="1140---1210-1">11:40 - 12:10 </h2>
+<h3 id="unlock-the-power-of-your-raw-data-queryable--evolvable-storage-for-scalable-reprocessing">Unlock the Power of Your Raw Data: Queryable &amp; Evolvable Storage for Scalable Reprocessing </h3>
+<blockquote>
+<p>By Ravikumar Kumarasamy Vice President of Engineering at redBus</p>
+</blockquote>
+<p>Discover how redBus built a smart data platform component that transforms raw user interactions into queryable Parquet files on S3. Learn how its auto-schema detection and evolution capabilities enable efficient debugging, analytics, and model training at scale.</p>
+<h2 id="1215---1245-1">12:15 - 12:45 </h2>
+<h3 id="architecting-scalable-data-pipelines-for-financial-insights">Architecting Scalable Data Pipelines for Financial Insights </h3>
+<blockquote>
+<p>By Jagroop Singh Head - Data Engineering at Piramal Capital &amp; Housing Finance</p>
+</blockquote>
+<p>In today’s data-driven financial ecosystem, speed, scale, and accuracy are non-negotiable. This session explores the key principles and real-world practices behind building scalable data pipelines that power meaningful financial insights. From ingesting high-volume transactional data to ensuring real-time processing and analytics, we'll dive into architectural patterns, technology choices, and performance considerations that enable organizations to unlock value from their data. Whether you're modernizing legacy systems or designing from the ground up, this talk will equip you with practical takeaways to build resilient, future-ready data pipelines tailored for the dynamic demands of the financial domain.</p>
+<h2 id="1345---1410">13:45 - 14:10 </h2>
+<h3 id="building-resilient-data-architectures">Building Resilient Data Architectures </h3>
+<blockquote>
+<p>By Biru Kumar Technical Advisor at Betterhalf &amp; Co-Founder &amp; CEO at Limpio</p>
+</blockquote>
+<p>In today’s data-driven world, ensuring resilience in data architectures is crucial for maintaining seamless operations, minimizing downtime, and enabling real-time decision-making. This session explores the key principles of designing fault-tolerant, scalable, and adaptive data ecosystems that can withstand failures and disruptions. Key focus areas include strategies for high availability, redundancy, disaster recovery planning, and leveraging distributed computing and cloud-native technologies to enhance resilience. Real-world insights will showcase how resilient data architectures can optimize performance, improve reliability, and support business continuity in an evolving technological landscape</p>
+<h2 id="1410---1435">14:10 - 14:35 </h2>
+<h3 id="future-forward-health-insurance-data-platform">Future-forward health insurance data platform </h3>
+<blockquote>
+<p>By Dhruv Rastogi SVP &amp; Head of Data Science at Medi Assist</p>
+</blockquote>
+<p>Building a future-forward health insurance data platform focuses on leveraging emerging technologies like AI, machine learning, and blockchain to revolutionize data management in the insurance sector. By integrating diverse data sources such as medical records, wearable devices, and claims data, the platform enables personalized policies, faster claims processing, and enhanced risk management. This approach not only increases operational efficiency but also improves customer satisfaction by providing tailored coverage and real-time insights</p>
+<h2 id="1435---1500">14:35 - 15:00 </h2>
+<h3 id="real-time-data-pipelines-powering-instant-insights-and-decision-making">Real-Time Data Pipelines: Powering Instant Insights and Decision-Making </h3>
+<blockquote>
+<p>By Pradeep Sharma VP Technology at Cars24</p>
+</blockquote>
+<p>Real-time data pipelines enable organizations to ingest, process, and act on streaming data with minimal latency, ensuring they can make informed decisions instantly. This session will explore the core components of real-time data pipelines, including event-driven architectures, stream processing frameworks, and scalable data ingestion technologies. We’ll discuss real-world applications such as fraud detection, predictive analytics, IoT monitoring, and personalized customer experiences. By the end of the session, attendees will gain a deeper understanding of how real-time data pipelines drive agility, enhance operational efficiency, and unlock new business opportunities. Whether you're a data engineer, architect, or business leader, this talk will equip you with the knowledge to harness the power of real-time data for smarter decision-making.</p>
+<h2 id="1500---1525">15:00 - 15:25 </h2>
+<h3 id="the-data-engineering-practices">The Data Engineering Practices </h3>
+<blockquote>
+<p>By Shankargouda Dm Deputy Vice President of Data Engineering at HDFC Bank</p>
+</blockquote>
+<p>This session is to outline strategic data engineering practices that drive innovation and business growth. Emphasizing scalability, data quality, and operational efficiency. The session highlights how modern data platforms, automation, and governance empower data-driven decision-making across the organization.</p>
+<h2 id="1525---1550">15:25 - 15:50 </h2>
+<h3 id="architecting-data-quality-trust--reliability-in-modern-data-stacks">Architecting Data Quality: Trust &amp; Reliability in Modern Data Stacks </h3>
+<blockquote>
+<p>By Ram Yermal Head of Data Architecture at wasl Group, Dubai</p>
+</blockquote>
+<p>As organizations increasingly rely on complex data ecosystems, maintaining data quality and trust has become paramount to business success. This discussion explores the critical components and best practices for implementing robust data quality frameworks within modern data architectures. We examine how organizations can establish automated testing, monitoring, and governance processes to ensure data reliability across the entire pipeline - from ingestion to consumption. Special attention is given to emerging tools and methodologies that enable continuous data quality assessment while scaling with growing data volumes and complexity.</p>
+<hr>
+<br>
+<div style="page-break-after: always;"></div>
+<h1 id="day-2--main-hall---thought-leadership-and-strategic-insights">Day 2 | Main Hall - Thought Leadership and Strategic Insights </h1>
+<h2 id="1000---1030">10:00 - 10:30 </h2>
+<h3 id="making-data-think">Making Data Think </h3>
+<blockquote>
+<p>By Hariharan Ganesan Vice President and Head at RollsRoyce Data Labs</p>
+</blockquote>
+<p>In an era where data is abundant but insight is scarce, the true challenge lies not just in collecting information, but in empowering it to act. "Making Data Think" explores how organizations can move beyond passive dashboards to intelligent systems that reason, adapt, and predict. This session delves into the intersection of data engineering, AI, and decision intelligence — showcasing how contextual awareness, machine learning, and real-time feedback loops are transforming raw data into active, thinking partners in innovation. Whether you're a data leader or a curious technologist, this talk will leave you reimagining the very role of data in the enterprise.</p>
+<h2 id="1030---1050">10:30 - 10:50 </h2>
+<h3 id="data-engineering-transformation-with-ai-agents">Data Engineering Transformation with AI Agents </h3>
+<blockquote>
+<p>By Manjunatha G Engineering &amp; Site Leader - Global Technology Centre at 3M</p>
+</blockquote>
+<p>This session explores how AI agents are transforming data engineering by automating complex workflows such as data ingestion, transformation, and pipeline orchestration. With real-time analytics and intelligent decision-making becoming critical, AI-driven automation is enabling greater efficiency, scalability, and accuracy in data processes. From automated anomaly detection to schema evolution and performance optimization, discover practical use cases that showcase the power of AI in simplifying and future-proofing data engineering strategies. Ideal for data engineers, architects, and AI enthusiasts, this talk offers insights into leveraging AI agents to reduce operational overhead and stay ahead in the era of intelligent automation.</p>
+<h2 id="1050---1120-1">10:50 - 11:20 </h2>
+<h3 id="data-revolution-revolutionizing-services-as-agentic-solution-powered-by-data">Data Revolution: Revolutionizing Services as Agentic solution powered by Data </h3>
+<blockquote>
+<p>By Aniruddha Ray Senior Vice President - Agentic Products and Platform Engineering at Genpact</p>
+</blockquote>
+<p>Aniruddha (Ani) Ray is the Senior Vice President &amp; the global technology lead for Agentic AI. He is also the global lead for Genpact’s Products and Platforms. He has been with Genpact for 8 months. His primary role is to create business impact and design the agentic architectures for our productized solutions to pivot to the “Services as Agentic Software” paradigm. He is currently leading the charge in rolling out the Genpact AP Suite while creating the Genpact Agentic Factory for the future. Ani has over 23+ years of experience in leading business and technology architecture to build and scale up products across companies like Accenture, EMC, IBM and GE. He started as a Data Engineer, evolved to become a Technology and Digital (Data, AI, Cloud) Architect and finally a technology strategy and innovation leader harnessing value for customers at the crossroads of business strategy and technology evolution. Ani has an MBA in Strategy from IIM Ahmedabad and an M. Tech from IIIT Bangalore. He holds over 10 Global Patents and in the last 10 Years has done more than 25+ Tech Certifications across Architecture and Engineering (Cloud, AI, ML, Data, Analytics) across all major Cloud Hyper-scalers and leading Data &amp; AI Vendors.</p>
+<h2 id="1120---1150-1">11:20 - 11:50 </h2>
+<h3 id="thinktank-targets-genai-platform-for-simplifying-llm-ops">ThinkTank: Target’s GenAI platform for simplifying LLM Ops </h3>
+<blockquote>
+<p>By Natarajan Ramamurthy VP, Data Engineering, Target</p>
+</blockquote>
+<p>As GenAI opens the door to limitless opportunities for businesses, large enterprises need to find ways to bring GenAI solutions into production rapidly, effectively, securely and at scale across diverse teams. In this session, explore how ThinkTank—Target’s GenAI development platform—enables teams to harness the full power of generative AI by promoting agility, accelerating innovation, and streamlining delivery. Learn about the origins of ThinkTank, how it empowers experimentation, and the transformative impact it has on enterprise-level initiatives.</p>
+<h2 id="1150---1220-1">11:50 - 12:20 </h2>
+<h3 id="the-evolution-from-data-quality-to-data-reliability-engineering-for-ai">The Evolution from Data Quality to Data Reliability Engineering for AI </h3>
+<blockquote>
+<p>By Sandesh Gawande Chief Executive Officer at iceDQ</p>
+</blockquote>
+<p>Developing reliable AI models requires high-quality data. Due to the shortcomings of traditional methods, there is a need to adopt data reliability engineering. This approach involves applying principles from manufacturing and considering systems as data factories. It entails significant adjustments to people, processes, and tools. - Data Testing: Validates data through migration testing, pipeline certification, and big data reconciliation. - Data Monitoring: Tracks data pipeline health using business rules, and handles exceptions in real time. - Data Observability: Uses AI/ML for anomaly detection, compliance measurement, and defect rate prediction. The talk will highlight these pillars—Data Testing, Data Monitoring, and Data Observability—showcasing their importance in preventing errors, ensuring compliance, and optimizing AI performance. Case studies and industry practices will demonstrate how to engineer quality data effectively.</p>
+<h2 id="1220---1250-1">12:20 - 12:50 </h2>
+<h3 id="ai-driven-data-engineering-for-the-future-of-gem">AI-Driven Data Engineering for the Future of GeM </h3>
+<blockquote>
+<p>By Pankaj Dikshit Chief Technology Officer at Government e Marketplace (GeM)</p>
+</blockquote>
+<p>The AI Hackathon on the Government e-Marketplace (GeM) brought together innovators to solve real-world public sector challenges using cutting-edge technologies—Generative AI, Deep Learning, and Machine Learning. This session showcases standout use cases that emerged from the hackathon, demonstrating how AI can enhance transparency, efficiency, and user experience on GeM. At the heart of these innovations lies a solid Data Engineering foundation—powering everything from data ingestion and transformation to model training and deployment. Without it, these AI solutions wouldn’t scale or succeed. This talk will highlight how robust data engineering practices made the leap from idea to impact possible.</p>
+<h2 id="1250---1330">12:50 - 13:30 </h2>
+<h3 id="panel-discussion-data-as-a-product-a-game-changer-or-just-a-buzzword">Panel Discussion: Data as a Product: A Game-Changer or Just a Buzzword? </h3>
+<blockquote>
+<p>By Balaji Hariharan Sr. Director, Head of Product/Analytics/UX, Samsung Electronics, Kanhaiya Gautam CTO at Lentra, Vineet Govil CTPO at PhysicsWallah, Arun Munuswamy Assistant Vice President – Delivery Director at Genpact</p>
+</blockquote>
+<p>The concept of data as a product is gaining traction, promising improved accessibility, ownership, and value creation. But is this approach practical for all organizations, or is it just another theoretical framework? This discussion will explore the real-world adoption of data product thinking, its impact on governance and analytics, and whether businesses are truly structured to make the most of it.</p>
+<h2 id="1430---1500">14:30 - 15:00 </h2>
+<h3 id="humanising-big-data-for-nextillions-customers">Humanising Big Data for nextillions customers </h3>
+<blockquote>
+<p>By Ashish Tiwari Senior Vice President - Head Bigdata at Axis Bank</p>
+</blockquote>
+<p>As organizations scale to serve the "nextillions" – the next billion+ users entering the digital ecosystem – data becomes both a powerful enabler and a complex challenge. This session explores how we can humanize big data by bridging the gap between massive datasets and meaningful customer experiences. From hyper-personalization and intuitive decision-making to building trust through data ethics and compliance, the talk will highlight how businesses can move beyond numbers to truly understand and serve the diverse needs of emerging digital users. Real-world insights and case studies will demonstrate how human-centric data platforms, scalable architectures, and inclusive design principles are shaping the future of customer engagement at scale.</p>
+<h2 id="1500---1530">15:00 - 15:30 </h2>
+<h3 id="ethical-ai-development-for-sensitive-domains">Ethical AI Development for Sensitive Domains </h3>
+<blockquote>
+<p>By Raul John Young AI Educator</p>
+</blockquote>
+<p>Addressing privacy, fairness, and bias while designing law bots for legal assistance.</p>
+<h2 id="1530---1600">15:30 - 16:00 </h2>
+<h3 id="engineering-ai-powered-threat-detection-at-pharma-scale">Engineering AI-Powered Threat Detection at Pharma Scale </h3>
+<blockquote>
+<p>By Vineet Srivastava Head of Detection Engineering at GSK</p>
+</blockquote>
+<p>In an era where the pharmaceutical industry is increasingly reliant on complex digital infrastructures and sensitive data, the threat landscape has grown both in scale and sophistication. This session will explore how AI-driven threat detection systems can be engineered to meet the unique challenges of the pharma sector—ranging from protecting intellectual property to ensuring patient data integrity and compliance with stringent regulations. Drawing from real-world implementations, the talk will delve into scalable architectures, real-time anomaly detection, and the fusion of domain knowledge with machine learning to proactively mitigate cyber threats at an enterprise scale.</p>
+<h2 id="1600---1700">16:00 - 17:00 </h2>
+<h3 id="10-wickets-one-vision-what-cricket-teaches-us-about-legacy-consistency-and-the-power-of-focus">10 Wickets, One Vision: What Cricket Teaches Us About Legacy, Consistency, and the Power of Focus </h3>
+<blockquote>
+<p>By Anil Kumble Former Indian Cricketer, Captain and Coach</p>
+</blockquote>
+<p>In 1999, Anil Kumble etched his name in cricket history by taking 10 wickets in a single innings. But the story isn't just about stats — it’s about focus, perseverance, and alignment. In this reflective conversation, Kumble shares what it means to stay consistent across decades, how to reinvent yourself through data, and why long-term thinking trumps short-term wins — be it in sports, leadership, or engineering modern data foundations.</p>
+<h2 id="1700---1800">17:00 - 18:00 </h2>
+<h3 id="the-finkelstein-awards-for-data-engineering-excellence-2025">The Finkelstein Awards for Data Engineering Excellence 2025 </h3>
+<blockquote>
+<p>By Anil Kumble Former Indian Cricketer, Captain and Coach</p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
